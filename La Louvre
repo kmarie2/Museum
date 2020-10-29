@@ -1,0 +1,227 @@
+def works():
+    a = "sf01 Venus de Milo"
+    b = "sm18 Saint Jean-Baptiste"
+    c = "sm19 Spartacus"
+    d = "sf18 Madame Vieugheis"
+    e = "sf18 Flore"
+    f = "pm18 Louis XIV"
+    g = "pm18 Denis Diderot"
+    h = "pf16 Flore"
+    i = "pm15 Charles VII"
+    j = "pf16 Mona Lisa"
+    k = "pm18 Master Hare"
+    l = "pf16 Eva Prima Pandora"
+    m = "pf18 Marie Madeleine Guimard"
+    n = "pf18 Madame Recamier"
+    o = "pf18 Madame Charles-Louis Tradine"
+    p = "pf19 Une Odalisque"
+    q = "pm18 Charles Joseph Crowle"
+    r = "pm18 Ferdinand Guillemardet"
+    s = "pm19 Louis-Francois Bertin"
+    t = "pm15 Sigismondo Pandolfo Malatesta"
+    u = "sf18 Amphitrite"
+    v = "sm18 Buffon"
+    w = "sf18 Marie Serre"
+    x = "sf19 Nathalie de Laborde"
+    y = "sm18 Voltaire"
+
+    allworks = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y]
+    return(allworks)
+
+def favorite():
+    a = "sf01 Venus de Milo"
+    c = "sm19 Spartacus"
+    f = "pm18 Louis XIV"
+    h = "pf16 Flore"
+    i = "pm15 Charles VII"
+    j = "pf16 Mona Lisa"
+    k = "pm18 Master Hare"
+    t = "pm15 Sigismondo Pandolfo Malatesta"
+    u = "sf18 Amphitrite"
+    y = "sm18 Voltaire"
+
+    myfavs = [a,c,f,h,i,j,k,t,u,y]
+    return(myfavs)
+
+def next(language):
+    if language == "francais":
+        for language in range(1):
+            print("Parfait! Bienvenue a La Louvre! Nous esperons que vous passez un bon experience ici avec toutes les oeuvres exceptionelles!")
+            print("Pour aujourd'hui, Je recommend que vous regardez les oeuvres qui partagent la meme theme: les personnes!")
+            museum=works()
+            favs=favorite()
+            option=input("Voudriez-vous voir d'oeuvres de nos categories ou...pourrais-je faire une surprise a vous? Pour choisir, tapez 'vos categories' ou 'faire une surprise.'")
+            if option == "vos categories":
+                kind=input("Quel types d'oeuvres vous interessez vous? Tapez s pour les sculptures, p pour les peintures.")
+                gender=input("Aimeriez-vous voir les figures feminines ou les figures masculines? Tapez f pour les figures feminines or m pour les figures masculines.")
+                century=input("Quel est le numero du siecle? Par exemple, tapez 01 pour 1e siecle.")
+    
+                if kind == "s":
+                    if gender == "f":
+                        if century == "01":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "sf01":
+                                    print(arrow[5:]) 
+
+                    if gender == "f":
+                        if century == "18":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "sf18":
+                                    print(arrow[5:])
+
+                    if gender == "f":
+                        if century == "19":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "sf19":
+                                    print(arrow[5:])
+                    if gender == "m":
+                        if century == "18":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "sm18":
+                                    print(arrow[5:])
+                    if gender == "m":
+                        if century == "19":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "sm19":
+                                    print(arrow[5:])
+
+                elif kind == "p":
+                    if gender == "f":
+                        if century == "16":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "pf16":
+                                    print(arrow[5:])
+                    if gender == "f":
+                        if century == "18":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "pf18":
+                                    print(arrow[5:])
+                    if gender == "f":
+                        if century == "19":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "pf19":
+                                    print(arrow[5:])
+                    if gender == "m":
+                        if century == "15":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "pm15":
+                                    print(arrow[5:])
+                    if gender == "m":
+                        if century == "18":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "pm18":
+                                    print(arrow[5:])
+
+                    if gender == "m":
+                        if century == "19":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "pm19":
+                                    print(arrow[5:])
+                else:
+                    print("Je suis desolee. Aujourd'hui, nous n'avons pas des oeuvres que vous trouvez.")
+                    
+            if option == "faire une surprise":
+                print("Yay! Je suis heureuse de presenter mes oeuvres favorites!")
+                print("Voila!")
+                for arrow in favs:
+                    print(arrow [4:])
+            print("Merci beaucoup de visiter la Louvre! Bonne journee!")
+                                
+                
+
+    elif language == "english":
+        for language in range(1):
+            print("Perfect! Welcome to La Louvre! We hope you have a great experience here with all of our great artworks!")
+            print("For today, I recommend that you see the artworks that share the common theme: people!")
+            museum=works()
+            favs=favorite()
+            option=input("Would you like to see works from our categories or...may I surprise you? To choose, type 'your categories' or 'surprise me.'")
+            if option == "your categories":
+                kind=input("What kind of artwork(s) to do want to see? Type s for sculpture, or p for painting.")
+                gender=input("Would you like to see female or male figures? Please type f or m.")
+                century=input("What is the number of the century? For example, type 01 for the 1st century.")
+
+                if kind == "s":
+                    if gender == "f":
+                        if century == "01":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "sf01":
+                                    print(arrow[5:]) 
+                    if gender == "f":
+                        if century == "18":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "sf18":
+                                    print(arrow[5:])
+                    if gender == "f":
+                        if century == "19":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "sf19":
+                                    print(arrow[5:])
+                    if gender == "m":
+                        if century == "18":
+                            print("Volia!")
+                            for arrow in museum:
+                                if arrow[:4] == "sm18":
+                                    print(arrow[5:])
+                    if gender == "m":
+                        if century == "19":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "sm19":
+                                    print(arrow[5:])
+
+                elif kind == "p":
+                    if gender == "f":
+                        if century == "16":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "pf16":
+                                    print(arrow[5:])
+                    if gender == "f":
+                        if century == "18":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "pf18":
+                                    print(arrow[5:])
+                    if gender == "f":
+                        if century == "19":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "pf19":
+                                    print(arrow[5:])
+                    if gender == "m":
+                        if century == "15":
+                            print("Voila!")
+                            for arrow in museum:
+                                if arrow[:4] == "pm15":
+                                    print(arrow[5:])
+                else:
+                    print("Sorry, we do not have works that you are looking for today.")
+                    
+            if option == "surprise me":
+                print("Yay! I will happily surprise you by showing you my favorite works!")
+                print("Voila!")
+                for arrow in favs:
+                    print(arrow [4:])
+                print("Thank you for visiting the Louvre! Have a nice day!")
+                
+def main ():
+    works()
+    favorite()
+    language=input("Do you speak english? Ou vous parlez francais? Type/Tapez 'english' or/ou 'francais'.")
+    next(language)
+main()
